@@ -23,8 +23,10 @@ class InsuranceException(Exception):
         error_message= f"Error occured in sript: [{file_name}] at line number: [{line_number}] error_message: [{error_message}]" 
         return error_message
     
+    #return a user friendly discription of an object
     def __str__(self) -> str:
         return self.error_message
-
+    
+    #string representation of the object
     def __repr__(self) -> str:
         return InsuranceException.__name__.str()
